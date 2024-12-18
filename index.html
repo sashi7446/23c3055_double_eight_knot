@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二重八の字結び(ダブルエイトノット) - 登山の基本テクニック</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+            color: #5f5d60;
+            line-height: 1.6;
+        }
+
+        header {
+            height: 65px;
+            width: 100%;
+            background-color: rgba(34,49,52,0.9);
+            position: relative;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header-left {
+            float: left;
+        }
+
+        .header-right {
+            float: right;
+            margin-right: -10;
+        }
+
+        .header-right a {
+            line-height: 65px;
+            padding: 0 25px;
+            color: white;
+            display: block;
+            float: left;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .header-right a:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .top-wrapper {
+            padding: 180px 0 100px 0;
+            background-image: url('/image/background.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .top-wrapper h1 {
+            opacity: 0.9;
+            font-size: 45px;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .top-wrapper p {
+            opacity: 0.9;
+            font-size: 16px;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .content-wrapper {
+            background-color: #f7f7f7;
+            padding: 50px 0;
+        }
+
+        .feature-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .feature-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            width: calc(33.33% - 20px);
+            min-width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .feature-box h3 {
+            color: #239b76;
+            margin-top: 0;
+        }
+
+        .tutorial-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: grid;
+            place-items: center;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .step-box {
+            width: calc(25% - 15px);
+            min-width: 250px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .step-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .usage-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .usage-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            width: calc(33.33% - 20px);
+            min-width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .usage-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 30px auto;
+        }
+
+        .video-container img {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media all and (max-width: 1000px) {
+            .feature-box, .usage-box {
+                width: calc(50% - 15px);
+            }
+        }
+
+        @media all and (max-width: 750px) {
+            .top-wrapper h1 {
+                font-size: 32px;
+            }
+            
+            .step-box {
+                width: 100%;
+            }
+        }
+
+        @media all and (max-width: 670px) {
+            .header-right {
+                display: none;
+            }
+            
+            .feature-box, .usage-box {
+                width: 100%;
+            }
+
+            .top-wrapper {
+                text-align: left;
+                padding: 120px 0 60px 0;
+            }
+
+            .top-wrapper h1 {
+                font-size: 24px;
+            }
+
+            .top-wrapper p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <img src="/images/logo.png" alt="ロゴ" class="logo">
+            </div>
+            <div class="header-right">
+                <a href="#">ホーム</a>
+                <a href="#">結び方一覧</a>
+                <a href="#">安全対策</a>
+                <a href="#">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="top-wrapper">
+        <div class="container">
+            <h1>二重八の字結び</h1>
+            <p>登山の基本となる結び方を、<br>わかりやすく解説します</p>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="feature-section">
+                <div class="feature-box">
+                    <h3>✅ 高い強度</h3>
+                    <p>負荷がかかっても解けにくく、安全性が高い結び方です。クライミングでも標準的に使用される信頼性の高い結び方です。</p>
+                </div>
+                <div class="feature-box">
+                    <h3>✅ 確認が容易</h3>
+                    <p>8の字の形で結ばれているため、正しく結べているか一目で確認できます。初心者でも間違いを見つけやすい特徴があります。</p>
+                </div>
+                <div class="feature-box">
+                    <h3>✅ 簡単な習得</h3>
+                    <p>手順が分かりやすく、初心者でも覚えやすい結び方です。一度覚えれば、様々な場面で活用できます。</p>
+                </div>
+            </div>
+
+            <div class="tutorial-section">
+                <h2>結び方の手順</h2>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/T4AJVQt4u3s" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="steps-container">
+                    <div class="step-box">
+                        <img src="/api/placeholder/400/300" alt="手順1">
+                        <h3>Step 1</h3>
+                        <p>ロープを折り返して輪を作ります</p>
+                    </div>
+                    <div class="step-box">
+                        <img src="/api/placeholder/400/300" alt="手順2">
+                        <h3>Step 2</h3>
+                        <p>8の字を描くように下から回します</p>
+                    </div>
+                    <div class="step-box">
+                        <img src="/api/placeholder/400/300" alt="手順3">
+                        <h3>Step 3</h3>
+                        <p>ロープの端を最初の輪に通します</p>
+                    </div>
+                    <div class="step-box">
+                        <img src="/api/placeholder/400/300" alt="手順4">
+                        <h3>Step 4</h3>
+                        <p>形を整えて完成です</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>使用シーン</h2>
+            <div class="usage-section">
+                <div class="usage-box">
+                    <img src="/api/placeholder/400/300" alt="クライミング">
+                    <h3>クライミング</h3>
+                    <p>ハーネスへのロープ固定に使用します。高い強度と安全性が必要な場面での定番の結び方です。</p>
+                </div>
+                <div class="usage-box">
+                    <img src="/api/placeholder/400/300" alt="キャンプ">
+                    <h3>キャンプ</h3>
+                    <p>テントやタープの設営時に使用します。強風時でも安定した固定が可能です。</p>
+                </div>
+                <div class="usage-box">
+                    <img src="/api/placeholder/400/300" alt="登山">
+                    <h3>登山</h3>
+                    <p>荷物の固定や吊り上げに使用します。確実な固定が必要な場面で重宝します。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
