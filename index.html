@@ -74,6 +74,7 @@
             letter-spacing: 5px;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
         }
 
         .top-wrapper p {
@@ -81,6 +82,7 @@
             font-size: 16px;
             margin-bottom: 40px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            animation: fadeInUp 1.2s ease-out;
         }
 
         .content-wrapper {
@@ -103,11 +105,24 @@
             width: calc(33.33% - 20px);
             min-width: 300px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(35, 155, 118, 0.3);
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf9 100%);
         }
 
         .feature-box h3 {
             color: #239b76;
             margin-top: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover h3 {
+            transform: scale(1.1);
         }
 
         .tutorial-section {
@@ -135,6 +150,14 @@
             border-radius: 8px;
             padding: 20px;
             text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .step-box:hover {
+            background-color: #ffffff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
         .step-box img {
@@ -143,6 +166,11 @@
             object-fit: cover;
             border-radius: 4px;
             margin-bottom: 15px;
+            transition: transform 0.4s ease;
+        }
+
+        .step-box:hover img {
+            transform: scale(1.08);
         }
 
         .usage-section {
@@ -159,6 +187,14 @@
             width: calc(33.33% - 20px);
             min-width: 300px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .usage-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
 
         .usage-box img {
@@ -167,6 +203,176 @@
             object-fit: cover;
             border-radius: 4px;
             margin-bottom: 15px;
+            transition: transform 0.5s ease;
+        }
+
+        .usage-box:hover img {
+            transform: scale(1.15);
+        }
+
+        /* 安全性セクション */
+        .safety-alert {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+            border-left: 6px solid #ff5252;
+            animation: pulse-shadow 3s infinite;
+        }
+
+        .safety-alert h2 {
+            margin-top: 0;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .safety-alert .warning-icon {
+            font-size: 32px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes pulse-shadow {
+            0%, 100% { box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3); }
+            50% { box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5); }
+        }
+
+        .safety-content {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .safety-content ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .safety-content li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        /* 長所・短所セクション */
+        .pros-cons-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .pros-box, .cons-box {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .pros-box {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            color: white;
+            border-left: 6px solid #00a383;
+        }
+
+        .cons-box {
+            background: linear-gradient(135deg, #fdcb6e 0%, #ffeaa7 100%);
+            color: #2d3436;
+            border-left: 6px solid #f39c12;
+        }
+
+        .pros-box:hover, .cons-box:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .pros-box h3, .cons-box h3 {
+            margin-top: 0;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pros-box ul, .cons-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pros-box li::before {
+            content: "✓ ";
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        .cons-box li::before {
+            content: "⚠ ";
+            font-size: 18px;
+            margin-right: 8px;
+        }
+
+        .pros-box li, .cons-box li {
+            margin: 12px 0;
+            padding-left: 10px;
+            line-height: 1.8;
+        }
+
+        /* アニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
         }
 
         .video-container {
@@ -249,6 +455,20 @@
 
     <div class="content-wrapper">
         <div class="container">
+            <!-- 安全性警告セクション -->
+            <div class="safety-alert fade-in-up">
+                <h2><span class="warning-icon">⚠️</span>登山の安全性に関わる重要な結び方</h2>
+                <div class="safety-content">
+                    <p><strong>二重八の字結びは、命を守るための基本技術です。</strong></p>
+                    <ul>
+                        <li><strong>なぜ安全なのか：</strong>ロープにかかる荷重が均等に分散され、結び目が自然に解けることがほとんどありません</li>
+                        <li><strong>適切な使用場面：</strong>ハーネスとロープの接続、確保点の作成、荷物の吊り上げなど</li>
+                        <li><strong>必ず守ること：</strong>結び終わったら必ず形状を確認し、ロープの末端は最低15cm以上残す</li>
+                        <li><strong>練習の重要性：</strong>緊急時にも確実に結べるよう、繰り返し練習してください</li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="feature-section">
                 <div class="feature-box">
                     <h3>✅ 高い強度</h3>
@@ -261,6 +481,30 @@
                 <div class="feature-box">
                     <h3>✅ 簡単な習得</h3>
                     <p>手順が分かりやすく、初心者でも覚えやすい結び方です。一度覚えれば、様々な場面で活用できます。</p>
+                </div>
+            </div>
+
+            <!-- 長所・短所の詳細セクション -->
+            <div class="pros-cons-section">
+                <div class="pros-box slide-in-left">
+                    <h3>👍 長所（メリット）</h3>
+                    <ul>
+                        <li>極めて高い強度を持ち、ロープの破断強度の約70-75%を維持</li>
+                        <li>結び目の形状が視覚的に確認しやすく、安全チェックが容易</li>
+                        <li>荷重がかかっても結び目が締まりすぎず、解除が比較的容易</li>
+                        <li>初心者でも短時間で習得可能な実用的な結び方</li>
+                        <li>国際的に認められた標準的な結び方で、世界中で通用</li>
+                    </ul>
+                </div>
+                <div class="cons-box slide-in-right">
+                    <h3>⚠️ 短所・注意点</h3>
+                    <ul>
+                        <li>結び目が大きくなるため、ロープを多く消費する（約60-70cm）</li>
+                        <li>狭い場所では結び目が引っかかる可能性がある</li>
+                        <li>濡れた状態や凍結時は結びにくく、解きにくくなる</li>
+                        <li>ロープの末端処理を忘れると、負荷時に緩む危険性あり</li>
+                        <li>定期的な結び直しが推奨される（特に長時間の使用後）</li>
+                    </ul>
                 </div>
             </div>
 
